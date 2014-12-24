@@ -29,7 +29,7 @@ $user_id=$this->session->userdata('user_id');
 if (!empty($user_id)){
 	redirect('/main');
 }
-// Otherwise run the rest of the PHP code on form validation
+// Otherwise run the rest of the PHP code on form validation to output errors if there are any. 
 else {
 	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 	echo validation_errors();
